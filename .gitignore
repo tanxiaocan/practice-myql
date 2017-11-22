@@ -11,12 +11,3 @@ src/main/webapp/WEB-INF/lib
 gradle
 gradlew
 gradlew.bat
-.idea/compiler.xml
-.idea/copyright/profiles_settings.xml
-.idea/gradle.xml
-.idea/libraries/Gradle__junit_junit_4_11.xml
-.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml
-.idea/misc.xml
-.idea/modules/practice-mysql_main.iml
-.idea/modules/practice-mysql_test.iml
-.idea/workspace.xml
