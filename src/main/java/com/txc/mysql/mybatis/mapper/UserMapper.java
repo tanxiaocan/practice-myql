@@ -7,6 +7,6 @@ import org.apache.ibatis.annotations.Select;
  * Created by tanxiaocan on 2017/11/3.
  */
 public interface UserMapper {
-    @Select("select uid,account_name as accountName,head_url as headUrl from user where uid=#{0}")
-    User getUserByUid(long uid);
+    @Select("select uid,account_name,head_url from user where uid=#{param1} and status=#{param2}")
+    User getUserByUid(long uid,Integer status);
 }

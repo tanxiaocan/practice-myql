@@ -3,9 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
     <properties resource="properties/config.properties">
         <property name="driver" value="com.mysql.jdbc.Driver"/>
     </properties>
+
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -17,6 +24,8 @@
             </dataSource>
         </environment>
     </environments>
+
+
     <mappers>
         <mapper resource="mapper/UserMapper.xml"/>
     </mappers>

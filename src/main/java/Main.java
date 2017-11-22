@@ -9,10 +9,11 @@ import org.apache.ibatis.session.SqlSessionFactory;
  */
 public class Main {
     public static void main(String[] args){
-        SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtil.getSqlSessionFactory("config/mybatis-config.xml");
+//        SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtil.getSqlSessionFactory("config/mybatis-config.xml");
+        SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtil.getSqlSessionFactory();
         SqlSession sqlSession = sqlSessionFactory.openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        User user = userMapper.getUserByUid(10645923);
+        User user = userMapper.getUserByUid(10645923,1);
         System.out.println(user);
     }
 }

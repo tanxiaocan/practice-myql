@@ -9,9 +9,11 @@
         <result property="accountName" column="account_name"/>
         <result property="headUrl" column="head_url"/>
     </resultMap>
-    <!--<select id="getUserByUid" resultMap="baseResultMap">-->
-        <!--SELECT uid,account_name,head_url-->
-        <!--WHERE-->
-        <!--uid = #{uid}-->
-    <!--</select>-->
+    <select id="getUserByUid" resultMap="baseResultMap">
+        SELECT uid,account_name,head_url
+        FROM
+        user_common
+        WHERE
+        uid = #{uid}
+    </select>
 </mapper>

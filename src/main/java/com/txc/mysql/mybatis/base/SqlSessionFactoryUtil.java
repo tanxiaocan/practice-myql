@@ -42,9 +42,12 @@ public class SqlSessionFactoryUtil {
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setUrl("jdbc:mysql://localhost:3306/focus_join?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC");
         druidDataSource.setUsername("root");
+        druidDataSource.setPassword("123123");
         TransactionFactory transactionFactory = new JdbcTransactionFactory();
         Environment environment = new Environment("development",transactionFactory,druidDataSource);
         Configuration configuration = new Configuration(environment);
+        configuration.setMapUnderscoreToCamelCase(true);
+        configuration.setUseActualParamName(true);
         //UserMapper.xml文件也会自动加载进来
         configuration.addMapper(UserMapper.class);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
